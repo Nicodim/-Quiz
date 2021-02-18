@@ -30,13 +30,14 @@ const botListTest = new Array(121);
         copy.visible = true;
         copy.content = content;
         setGameState(copy);
-        // document.body.style.overflow = 'hidden';
     };
 
     return (
         <div className='App'>
-                <button onClick={()=>showGame(false)}>Privet</button>
+            <div className={"content_wrapper"+(gameState.visible ? " blur" : "")}>
+                 <button onClick={()=>showGame(false)}>Privet</button>
                 <button onClick={()=>showGame(true)}>End Game</button>
+            </div>
                 {gameState.visible && <Popup onClose={hideGame}>
                     {!gameState.content && <BtnList list={botListTest}/>}
                     {gameState.content && <EndGame/>}
