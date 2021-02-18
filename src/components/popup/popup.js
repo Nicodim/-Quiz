@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './popup.css'
+import styles from './popup.module.css'
 
 const Popup = (props) => {
     return (
-        <div className="popup_wrapper">
+        <div className={styles.popup}>
+            <div className={styles.exit_btn} onClick={props.onClose}></div>
             {props.children}
         </div>
     )

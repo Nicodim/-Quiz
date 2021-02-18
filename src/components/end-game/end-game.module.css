@@ -26,35 +26,16 @@ margin-bottom: 33px;
   margin-bottom: 120px;
   position: relative;
 } 
-  .exit_btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    /* background-color: sandybrown; */
-    right: 2rem;
-    top: 1rem;
-    cursor: pointer;
-  }
-  
-  .exit_btn::before,
-  .exit_btn::after {
-    position: absolute;
-    content: '';
-    height: 40px;
-    width: 2px;
-    left: 18px;
-    background-color:#FFFFFF;
-  }
-  .exit_btn::before {
-    transform: rotate(45deg);
-  }
-  .exit_btn::after{
-    transform: rotate(-45deg);
-  }
+
 .popup_wrapper p {
     margin: 0;
 }
-
+.social_wrapper {
+    width: 125px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
 .social_buttons {
     margin: 65px;
 }
@@ -73,7 +54,7 @@ margin-bottom: 33px;
 .game_menu a {
     color: #FFFFFF;
     opacity: 0.5;
-    padding: 13px 73px;
+    padding: 13px 50px;
     text-align: center;
 }
 
@@ -103,12 +84,4 @@ margin-bottom: 33px;
     margin: 0;
     margin-bottom: 82px;
 }
-  .exit_btn {
-    right: 5rem;
-}
-  .exit_btn::before,
-  .exit_btn::after {
-    height: 30px;
-    left: 50px;
-  }
 }

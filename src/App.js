@@ -6,9 +6,13 @@ import EndGame from './components/end-game';
 import Popup from './components/popup'
 
 function App() {
-    const botList = new Array(120).fill(0).map((e,i)=> e+i+1 );
 // const [showPopup, setShowPopup] = useState(false);
 // const [contentType, setContentType] = useState(false);
+const botListTest = new Array(121);
+    const types = ["special", "current", "passed", "special_passed", null];
+    for (let i = 1; i < botListTest.length; i++) {
+        botListTest[i] = {value: i, type: types[Math.round(Math.random() * 5)]}
+    }
 
     const [gameState, setGameState] = useState({
         visible: false,
@@ -32,14 +36,9 @@ function App() {
         <div className='App'>
                 <button onClick={()=>showGame(false)}>Privet</button>
                 <button onClick={()=>showGame(true)}>End Game</button>
-                {gameState.visible && 
-                <Popup>
-                    {!gameState.content && 
-                    <BtnList onClose={hideGame} list={botList}/>
-                    }
-                    {gameState.content && 
-                    <EndGame onClose={hideGame}/>
-                    }
+                {gameState.visible && <Popup onClose={hideGame}>
+                    {!gameState.content && <BtnList list={botListTest}/>}
+                    {gameState.content && <EndGame/>}
                 </Popup>}
         </div>
     );
