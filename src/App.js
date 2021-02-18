@@ -11,7 +11,7 @@ function App() {
 const botListTest = new Array(121);
     const types = ["special", "current", "passed", "special_passed", null];
     for (let i = 1; i < botListTest.length; i++) {
-        botListTest[i] = {value: i, type: types[Math.round(Math.random() * 5)]}
+        botListTest[i] = {value: i, type: types[Math.round(Math.random() * 5)], id: i}
     }
 
     const [gameState, setGameState] = useState({
@@ -30,6 +30,7 @@ const botListTest = new Array(121);
         copy.visible = true;
         copy.content = content;
         setGameState(copy);
+        // document.body.style.overflow = 'hidden';
     };
 
     return (

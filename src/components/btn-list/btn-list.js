@@ -6,7 +6,7 @@ import styles from './btn-list.module.css';
 const BtnList = ({list}) => {
     const elements = list.map((el)=> {
         return (
-            <div className={styles.list_item+" "+styles[el.type]}>
+            <div key={el.id} className={styles.list_item+" "+styles[el.type]}>
                 <a className={styles.item_link} >{el.value}</a>
             </div>
         )

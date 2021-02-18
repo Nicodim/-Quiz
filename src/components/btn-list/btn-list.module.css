@@ -1,6 +1,6 @@
 
 .title_container {
-  width: 300px;
+  width: 550px;
   margin: 0 auto;
   font-family: HSE Sans;
   font-style: normal;
@@ -10,6 +10,8 @@
 .title_container h2 {
   margin-top: 150px;
   margin-bottom: 81px;
+  font-size: 60px;
+  line-height: 64px;
   font-style: normal;
   font-weight: normal;
 }
@@ -18,8 +20,12 @@
    padding-left: 6rem;
    padding-right: 6rem;
    display: flex;
-   flex-wrap: wrap;
+   flex-flow: row wrap;
    justify-content: space-between;
+}
+.list_wrapper::after {
+  content: "";
+  flex: auto;
 }
 .list_item {
     width: 50px;
@@ -42,7 +48,7 @@
     user-select: none;
 }
 .passed {
-  background-color: white;
+  background-color:#ffffff;
 }
 .current {
     background-color:#C7D332;
@@ -56,7 +62,8 @@
   background-color: #C64839;
 }
 
-.special a {
+.special a,
+.special_passed a{
     color: #ffffff;
 }
 
@@ -64,30 +71,6 @@
     position: relative;
   }
   
-  .exit_btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    /* background-color: sandybrown; */
-    right: 2rem;
-    top: 1rem;
-  }
-  
-  .exit_btn::before,
-  .exit_btn::after {
-    position: absolute;
-    content: '';
-    height: 40px;
-    width: 2px;
-    left: 18px;
-    background-color:#FFFFFF;
-  }
-  .exit_btn::before {
-    transform: rotate(45deg);
-  }
-  .exit_btn::after{
-    transform: rotate(-45deg);
-  }
 
 @media (max-width: 990px) {
   .list_wrapper {
@@ -104,7 +87,10 @@
     line-height: 20px;
     top: 15px;
   }
-
+  .title_container {
+      width: 300px;
+      margin: 0 auto;
+   }
   .title_container h2 {
     font-size: 24px;
     line-height: 30px;
