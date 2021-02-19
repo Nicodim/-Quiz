@@ -9,8 +9,18 @@ body {
   line-height: 30px;
 }
 
+.content_wrapper {
+  background-color: seashell;
+  color: #FFFFFF;
+  width: 100vw;
+  height: 100vh;
+}
 .blur {
-  backdrop-filter: blur(15px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+   -ms-filter: blur(2px);
+       filter: blur(2px);
 }
 .show {
   display: block;
