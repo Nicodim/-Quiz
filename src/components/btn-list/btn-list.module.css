@@ -71,8 +71,39 @@
     position: relative;
   }
   
+@media (min-width: 320px) and (max-width: 389px) {
+  .title_container {
+    width: 300px;
+    margin: 0 auto;
+ }
+  .title_container h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 18px 0;
+  }
+  .list_wrapper {
+    flex-direction: column;
+    max-height: 790px;
+    margin: 0 auto;
+    flex-flow: column wrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .list_item {
+    width: 37px;
+    height: 37px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
 
-@media (max-width: 990px) {
+  .item_link {
+    font-size: 16px;
+    line-height: 18px;
+    top: 1px;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 990px) {
   .list_wrapper {
     flex-direction: column;
     max-height: 700px;
@@ -93,7 +124,7 @@
   .item_link {
     font-size: 18px;
     line-height: 20px;
-    top: 10px;
+    top: 5px;
   }
   .title_container {
       width: 300px;
@@ -106,6 +137,26 @@
   }
 }
 
+@media (min-width: 990px) {
+  .list_wrapper {
+    width: 770px;
+    margin: 0 auto; 
+    padding: 0;
+  }
+
+  .list_wrapper::after {
+    content: "";
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list_wrapper { 
+    width: 1050px;
+    margin: 0 auto; 
+    padding: 0;
+  }
+}
 @media (min-width: 1600px) {
   .list_wrapper {
     width: 1400px;

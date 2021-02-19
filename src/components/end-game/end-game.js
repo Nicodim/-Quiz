@@ -18,7 +18,7 @@ const EndGame = props => {
                </div>
                <div>
                    <div className={styles.game_menu}>
-                       <a>Играть снова</a>
+                       <a className={styles.button_link}>Играть снова</a>
                        <a>На главную</a>
                        <a>Рейтинг</a>
                    </div>

@@ -3,16 +3,14 @@ body {
   background-color: seashell;
   color: #FFFFFF;
   font-family: HSE Sans;
-  backdrop-filter: blur(25px);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  filter: blur(5px);
+  backdrop-filter: blur(15px);
 }
 .show {
   display: block;

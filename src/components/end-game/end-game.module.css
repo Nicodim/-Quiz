@@ -56,15 +56,23 @@ margin-bottom: 33px;
     opacity: 0.5;
     padding: 13px 50px;
     text-align: center;
+    font-family: HSE Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
 }
 
-.game_menu a:first-child {
+.game_menu .button_link {
     background-color: #F1DB63;
     border: none;
     color: #000000;
     opacity: 1;
+    padding: 13px 50px 13px;
     border-radius: 25px;
     margin-bottom: 26px;
+    font-size: 24px;
+    line-height: 30px;
 }
 
 @media (max-width: 990px) {
@@ -84,5 +92,14 @@ margin-bottom: 33px;
   .social_buttons {
     margin: 0;
     margin-bottom: 82px;
-}
+  } 
+    .game_menu {
+        width: 251px
+  }
+  .game_menu a,
+  .game_menu .button_link {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 9px 50px 11px;
+  }
 }
