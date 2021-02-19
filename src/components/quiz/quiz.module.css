@@ -1,0 +1,19 @@
+.conent_wrapper {
+    width: auto;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    margin: 0 auto;
+    background-color: slategray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rest_items {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list_item {
+    width: 400px;
+}

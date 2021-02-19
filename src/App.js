@@ -4,10 +4,19 @@ import './components/btn-list'
 import BtnList from './components/btn-list';
 import EndGame from './components/end-game';
 import Popup from './components/popup'
+import Quiz from './components/quiz';
+import Pick_1 from './components/quiz/img/Pick_1.png';
+import Pick_2 from './components/quiz/img/Pick_2.png';
+import Pick_3 from './components/quiz/img/Pick_3.png';
+import Pick_4 from './components/quiz/img/Pick_4.png';
 
 function App() {
-// const [showPopup, setShowPopup] = useState(false);
-// const [contentType, setContentType] = useState(false);
+const q_content = [
+    {img:Pick_1, content: '«Жанна д’Арк становится главнокомандующей французскими войсками', id: 2, },
+    {img:Pick_2, content: 'Жанна д’Арк становится главнокомандующей французскими войсками ', id: 3, },
+    {img:Pick_3, content: 'Жанна д’Арк становится главнокомандующей французскими войсками ', id: 4, },
+    {img:Pick_4, content: 'Жанна д’Арк становится главнокомандующей французскими войсками ', id: 5, }
+]
 const botListTest = new Array(121);
     const types = ["special", "current", "passed", "special_passed", null];
     for (let i = 1; i < botListTest.length; i++) {
@@ -34,17 +43,23 @@ const botListTest = new Array(121);
 
     return (
         <div className='App'>
-            <div className={"content_wrapper"+(gameState.visible ? " blur" : "")}>
+            {/* <div className={"content_wrapper"+(gameState.visible ? " blur" : "")}>
                  <button onClick={()=>showGame(false)}>Privet</button>
                 <button onClick={()=>showGame(true)}>End Game</button>
             </div>
                 {gameState.visible && <Popup onClose={hideGame}>
                     {!gameState.content && <BtnList list={botListTest}/>}
                     {gameState.content && <EndGame/>}
-                </Popup>}
+                </Popup>} */}
+
+                <Quiz q_content={q_content} />
         </div>
     );
 
+
+
+// const [showPopup, setShowPopup] = useState(false);
+// const [contentType, setContentType] = useState(false);
     // return (
     //     <div className='App'>
     //              <button onClick={()=>{
